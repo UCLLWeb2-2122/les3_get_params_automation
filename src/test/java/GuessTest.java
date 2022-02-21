@@ -3,14 +3,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 import static org.junit.Assert.assertEquals;
 
 public class GuessTest {
 
     @Test
-    public void test_Wikipedia_with_KHL_results () {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+    public void test_guess_game () {
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("http://localhost:8080/Les3_get_params_automation_war_exploded/");
 

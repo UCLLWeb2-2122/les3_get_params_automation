@@ -1,17 +1,17 @@
-
-import static org.junit.Assert.*;
-
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import static org.junit.Assert.assertEquals;
+
 public class WikipediaSimpleTest {
 
     @Test
     public void test_Wikipedia_with_KHL_results () {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("http://en.wikipedia.org/wiki/Main_Page");
 
