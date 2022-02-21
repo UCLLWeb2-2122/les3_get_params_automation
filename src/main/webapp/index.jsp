@@ -8,6 +8,8 @@
 <h1><%= "Guessing game!" %>
 </h1>
 <br/>
-<a href="form.jsp">Click here to start guessing</a>
+
+
+
 </body>
 </html>
